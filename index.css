@@ -331,7 +331,7 @@ a:hover
 .tv-program-header-link::after
 {
     position: absolute;
-    content: url(images/tv-online.png);
+    content: url('images/tv-online.png');
     top: 0;
     right: 0;
 }
@@ -371,7 +371,7 @@ a:hover
 
 .temperature::before
 {
-    content: url(images/weather.png);
+    content: url('images/weather.png');
 }
 
 .temperature
@@ -417,7 +417,7 @@ a:hover
 
 .traffic-jams-rate::before
 {
-    content: url(images/traffic-jams.png);
+    content: url('images/traffic-jams.png');
 }
 
 /*  Блок "Анекдоты"  */
@@ -457,7 +457,7 @@ a:hover
 
 .next-anecdote-link::before
 {
-    content: url(images/next-anecdote.png);
+    content: url('images/next-anecdote.png');
 }
 
 /*  Блок "Карта Екатеринбурга"  */
@@ -565,7 +565,7 @@ a:hover
 {
     background: linear-gradient(to top, 
     rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-    height: 50px;
+    height: 35px;
     position: absolute;
     top: 8%;
     right: 0;
@@ -576,7 +576,7 @@ a:hover
 {
     background: linear-gradient(to bottom, 
     rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-    height: 50px;
+    height: 35px;
     position: absolute;
     bottom: 0;
     right: 0;
