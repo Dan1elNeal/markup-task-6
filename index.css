@@ -1,0 +1,646 @@
+.yandex-main
+{
+    display: grid;
+    
+    grid-template-columns: minmax(120px, 1fr) 270px 270px 
+        270px minmax(220px, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    grid-template-areas: '🎵 ☠️ ☠️ 🛀 💌'
+        '🍌 💎 💎 💎 ⚠️'
+        '⛔ 🐖 🐖 🐖 ⚠️'
+        '⛔ 🏆 🎯 ⚾ ⚠️'
+        '⛔ 🏆 🎯 🏅 ⚠️'
+        '⛔ 🌼 ⛳ ⚽ ⚠️'
+        '⛔ 🌼 ⛳ 🐟 ⚠️';
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    color: rgb(204,0,0);
+}
+
+/*  Блок с заголовком (Слово Яндекс)  */
+
+.page-header
+{
+    grid-area: 🍌;
+    position: relative;
+}
+
+.yandex-word::first-letter
+{
+    color: red;
+}
+
+.yandex-word
+{
+    font-size: 35px;
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+}
+
+/*  Блок с названием города  */
+
+.current-city-name
+{
+    grid-area: 🎵;
+    position: relative;
+}
+
+.current-city-name-link
+{
+    color: grey;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.current-city-name-link::before
+{
+    display: inline-block;
+    content: '\27A4';
+    transform: rotate(-45deg);
+}
+
+/*  Блок "Cейчас в СМИ"  */
+
+.smi-news
+{
+    margin-top: 50px;
+    grid-area: ☠️;
+}
+
+.smi-news-header
+{
+    font-size: 150%;
+    font-weight: normal;
+    display: inline-block;
+    margin: 0;
+}
+
+.smi-news-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.smi-news-city
+{
+    font-size: 150%;
+    opacity: .65;
+    margin-left: 7px;
+}
+
+.smi-news-city-link
+{
+    color: rgb(0,84,185);
+}
+
+.now-date
+{
+    margin-left: 7px;
+    color: gray;
+}
+
+.smi-news-list
+{
+    margin: 5px 0;
+    padding: 0;
+
+}
+
+.smi-news-list-item
+{
+    margin: 10px 0;
+}
+
+.exchange-rate
+{
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+
+.exchange-rates
+{
+    text-align: left;
+}
+
+.currency-name
+{
+    font-size: 100%;
+    display: inline-block;
+    margin: 0;
+}
+
+.change-in-rate
+{
+    color: grey;
+}
+
+.more-exchange-info
+{
+    display: inline-block;
+}
+
+.more-exchange-info-link
+{
+    color: grey;
+}
+
+/*  Блок с рекламой яндекс браузера  */
+
+.yandex-browser-advert
+{
+    margin-top: 50px;
+    grid-area: 🛀;
+    position: relative;
+}
+
+.yandex-browser-link
+{
+    color: rgb(0,84,185);
+}
+
+.age-limit
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.yandex-browser-advert-wrapper
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.yandex-browser-advert-header
+{
+    font-weight: normal;
+    margin: 5px 2px;
+}
+
+.yandex-browser-advert-info
+{
+    margin: 5px 2px;
+}
+
+/*  Блок с поиском  */
+
+.search-section
+{
+    margin-top: 20px;
+    grid-area: 💎;
+    grid-auto-rows: auto;
+}
+
+.site-navigation
+{
+    margin-bottom: 5px;
+}
+
+.site-navigation-link
+{
+    font-size: 130%;
+    color: rgb(0,84,185);
+    margin-right: 15px;
+}
+
+.search-wrapper
+{
+    position: relative;
+}
+
+.search-input
+{
+    display: inline-block;
+    width: 900px;
+    height: 35px;
+    border: 2px solid rgb(255,219,77);
+    outline: none;
+}
+
+.search-button
+{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: -80px;
+    width: 80px;
+    height: 35px;
+    border: 2px solid rgb(255,219,77);
+    background: rgb(255,219,77);
+    cursor: pointer;
+}
+
+.search-example
+{
+    margin: 0;
+    margin-top: 8px;
+    height: 20px;
+}
+
+.search-example-link
+{
+    color: grey;
+}
+
+/* Реклама автомобиля */
+
+.car-advert
+{
+    grid-area: 🐖;
+}
+
+.car-advert img
+{
+    max-width: 100%;
+}
+
+/* Блок "Посещаемое" */
+
+.most-visited
+{
+    grid-area: 🏆;
+}
+
+.most-visited-header
+{
+    font-weight: normal;
+    margin: 0;
+}
+
+.most-visited-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.most-visited-item
+{
+    margin: 10px 0;
+}
+
+.most-visited-item-header
+{
+    display: inline-block;
+    margin: 0;
+}
+
+.most-visited-item-header::after
+{
+    font-weight: normal;
+    content: '\00A0\2014';
+}
+
+/* Блок "Телепрограмма" */
+
+.tv-program
+{
+    grid-area: 🎯;
+}
+
+.tv-program-header-wrapper
+{
+    position: relative;
+}
+
+.tv-program-header
+{
+    font-weight: normal;
+    margin: 0;
+    display: inline-block;
+}
+
+.tv-program-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.tv-program-header-link::after
+{
+    position: absolute;
+    content: url(images/tv-online.png);
+    top: 0;
+    right: 0;
+}
+
+.tv-program-item
+{
+    margin: 10px 0;
+}
+
+.tv-program-name
+{
+    margin-left: 5px;
+}
+
+.tv-program-chanel
+{
+    margin-left: 5px;
+}
+
+.tv-program-chanel-link
+{
+    color: grey;
+}
+
+/*  Блок "Погода"  */
+
+.weather
+{
+    grid-area: ⚾;
+}
+
+.weather-header-link
+{
+    font-weight: normal;
+    color: rgb(0,84,185);
+}
+
+.temperature::before
+{
+    content: url(images/weather.png);
+}
+
+.temperature
+{
+    font-size: 130%;
+}
+
+.future-temperature
+{
+    display: inline-block;
+    margin: 7px 0;
+}
+
+.weather-header
+{
+    margin: 0;
+    display: inline-block;
+}
+
+/*  Блок "Пробки"  */
+
+.traffic-jams
+{
+    grid-area: 🏅;
+}
+
+.traffic-jams-header
+{
+    font-weight: normal;
+    display: inline-block;
+    margin: 0;
+}
+
+.traffic-jams-rate
+{
+    font-size: 130%;
+}
+
+.traffic-jams-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.traffic-jams-rate::before
+{
+    content: url(images/traffic-jams.png);
+}
+
+/*  Блок "Анекдоты"  */
+
+.anecdotes
+{
+    grid-area: 🌼;
+}
+
+.anecdotes-header
+{
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+.anecdotes-header-link,
+.anecdote-sort-link,
+.next-anecdote-link
+{
+    color: rgb(0,84,185);
+}
+
+.anecdote-sort::before
+{
+    content: 'Раздел: ';
+}
+
+.anecdote::before
+{
+    content: '- ';
+}
+
+.next-anecdote
+{
+    margin-top: 65px;
+}
+
+.next-anecdote-link::before
+{
+    content: url(images/next-anecdote.png);
+}
+
+/*  Блок "Карта Екатеринбурга"  */
+
+.city-map
+{
+    grid-area: ⚽;
+}
+
+.city-map-header
+{
+    font-weight: normal;
+    margin: 0;
+}
+
+.city-map-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.city-map-taxi,
+.city-map-schedule
+{
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+    margin-right: 10px;
+}
+
+.city-map-buses
+{
+    font-weight: bold;
+}
+
+/*  Блок "Афиша"  */
+
+.poster
+{
+    grid-area: 🐟;
+}
+
+.poster-header
+{
+    font-weight: normal;
+    margin: 0;
+}
+
+.poster-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.poster-item
+{
+    margin: 10px 0;
+}
+
+.poster-important
+{
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.poster-item-info
+{
+    color: grey;
+}
+
+.poster-important-name::after
+{
+    content: '\00A0\2014';
+}
+
+/*  Блок "Автомобильные новости"  */
+
+.car-news
+{
+    position: relative;
+    grid-area: ⛳;
+    height: 300px;
+    width: 270px;
+    overflow: hidden;
+}
+
+.car-news-header
+{
+    height: 24px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.car-news-header-link
+{
+    color: rgb(0,84,185);
+}
+
+.car-news-wrapper
+{
+    height: 273px;
+    width: 287px;
+    overflow: auto;
+}
+
+.block-for-shading-top
+{
+    background: linear-gradient(to top, 
+    rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    height: 50px;
+    position: absolute;
+    top: 8%;
+    right: 0;
+    left: 0;
+}
+
+.block-for-shading-bottom
+{
+    background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.car-news-item
+{
+    margin: 10px 0;
+}
+
+.car-news-time
+{
+    font-size: 90%;
+    color: grey;
+}
+
+/*  Блок с настройками и инфомацией о почтовом ящике  */
+
+.user-menu
+{
+    grid-area: 💌;
+}
+
+.settings
+{
+    display: inline-block;
+    width: 45%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.mailbox-info
+{
+    display: inline-block;
+    box-shadow: 0 0 5px rgba(128, 128, 128, .5);
+    border-radius: 4px;
+    width: 40%;
+    height: 70px;
+}
+
+.username
+{
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.username::first-letter
+{
+    color: red;
+}
+
+.number-of-letters
+{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.number-of-letters-link::before
+{
+    content: 'Почта';
+    margin: 10px;
+    margin-right: 10px;
+    margin-left: 15px;
+    font-weight: normal;
+}
