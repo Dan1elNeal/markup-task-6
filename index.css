@@ -3,7 +3,7 @@
     display: grid;
     
     grid-template-columns: minmax(120px, 1fr) 270px 270px 
-        270px minmax(220px, 1fr);
+        270px 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 20px;
     grid-template-areas: '🎵 ☠️ ☠️ 🛀 💌'
@@ -14,8 +14,7 @@
         '⛔ 🌼 ⛳ ⚽ ⚠️'
         '⛔ 🌼 ⛳ 🐟 ⚠️';
     
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
+    font: 13px Arial, Helvetica, sans-serif;
 }
 
 a
@@ -26,7 +25,7 @@ a
 
 a:hover
 {
-    color: rgb(204,0,0);
+    color: #c00;
 }
 
 /*  Блок с заголовком (Слово Яндекс)  */
@@ -34,7 +33,6 @@ a:hover
 .page-header
 {
     grid-area: 🍌;
-    position: relative;
 }
 
 .yandex-word::first-letter
@@ -45,9 +43,9 @@ a:hover
 .yandex-word
 {
     font-size: 35px;
-    position: absolute;
-    right: 0;
-    bottom: 28px;
+    width: 100%;
+    text-align: right;
+    padding-top: 43px;
 }
 
 /*  Блок с названием города  */
@@ -55,15 +53,14 @@ a:hover
 .current-city-name
 {
     grid-area: 🎵;
-    position: relative;
 }
 
 .current-city-name-link
 {
     color: grey;
-    position: absolute;
-    top: 10px;
-    left: 20px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 .current-city-name-link::before
@@ -83,7 +80,7 @@ a:hover
 
 .smi-news-header
 {
-    font-size: 150%;
+    font-size: 21px;
     font-weight: normal;
     display: inline-block;
     margin: 0;
@@ -91,19 +88,19 @@ a:hover
 
 .smi-news-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .smi-news-city
 {
-    font-size: 150%;
+    font-size: 21px;
     opacity: .65;
     margin-left: 7px;
 }
 
 .smi-news-city-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .now-date
@@ -138,7 +135,7 @@ a:hover
 
 .currency-name
 {
-    font-size: 100%;
+    font-size: 13px;
     display: inline-block;
     margin: 0;
 }
@@ -162,28 +159,18 @@ a:hover
 
 .yandex-browser-advert
 {
-    margin-top: 50px;
+    margin-top: 70px;
     grid-area: 🛀;
-    position: relative;
 }
 
 .yandex-browser-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .age-limit
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.yandex-browser-advert-wrapper
-{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-left: 200px;
 }
 
 .yandex-browser-advert-header
@@ -213,8 +200,8 @@ a:hover
 
 .site-navigation-link
 {
-    font-size: 130%;
-    color: rgb(0,84,185);
+    font-size: 17px;
+    color: #0054b9;
     margin-right: 15px;
 }
 
@@ -228,7 +215,7 @@ a:hover
     display: inline-block;
     width: 900px;
     height: 35px;
-    border: 2px solid rgb(255,219,77);
+    border: 2px solid #ffdb4d;
     padding-left: 10px;
     outline: none;
 }
@@ -241,8 +228,8 @@ a:hover
     right: -80px;
     width: 80px;
     height: 35px;
-    border: 2px solid rgb(255,219,77);
-    background: rgb(255,219,77);
+    border: 2px solid #ffdb4d;
+    background: #ffdb4d;
     cursor: pointer;
 }
 
@@ -285,7 +272,7 @@ a:hover
 
 .most-visited-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .most-visited-item
@@ -312,29 +299,20 @@ a:hover
     grid-area: 🎯;
 }
 
-.tv-program-header-wrapper
-{
-    position: relative;
-}
-
 .tv-program-header
 {
     font-weight: normal;
     margin: 0;
-    display: inline-block;
 }
 
 .tv-program-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
-.tv-program-header-link::after
+.tv-program-header-link-image
 {
-    position: absolute;
     content: url('images/tv-online.png');
-    top: 0;
-    right: 0;
 }
 
 .tv-program-item
@@ -367,7 +345,7 @@ a:hover
 .weather-header-link
 {
     font-weight: normal;
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .temperature::before
@@ -377,7 +355,7 @@ a:hover
 
 .temperature
 {
-    font-size: 130%;
+    font-size: 17px;
 }
 
 .future-temperature
@@ -408,12 +386,12 @@ a:hover
 
 .traffic-jams-rate
 {
-    font-size: 130%;
+    font-size: 17px;
 }
 
 .traffic-jams-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .traffic-jams-rate::before
@@ -438,12 +416,7 @@ a:hover
 .anecdote-sort-link,
 .next-anecdote-link
 {
-    color: rgb(0,84,185);
-}
-
-.anecdote-sort::before
-{
-    content: 'Раздел: ';
+    color: #0054b9;
 }
 
 .anecdote::before
@@ -476,7 +449,7 @@ a:hover
 
 .city-map-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .city-map-taxi,
@@ -508,7 +481,7 @@ a:hover
 
 .poster-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .poster-item
@@ -552,7 +525,7 @@ a:hover
 
 .car-news-header-link
 {
-    color: rgb(0,84,185);
+    color: #0054b9;
 }
 
 .car-news-wrapper
@@ -591,7 +564,7 @@ a:hover
 
 .car-news-time
 {
-    font-size: 90%;
+    font-size: 12px;
     color: grey;
 }
 
@@ -600,12 +573,13 @@ a:hover
 .user-menu
 {
     grid-area: 💌;
+    width: 270px;
 }
 
 .settings
 {
     display: inline-block;
-    width: 45%;
+    width: 122px;
     text-align: center;
     vertical-align: top;
 }
@@ -615,7 +589,7 @@ a:hover
     display: inline-block;
     box-shadow: 0 0 5px rgba(128, 128, 128, .5);
     border-radius: 4px;
-    width: 40%;
+    width: 120px;
     height: 70px;
 }
 
@@ -640,8 +614,6 @@ a:hover
 .number-of-letters-link::before
 {
     content: 'Почта';
-    margin: 10px;
-    margin-right: 10px;
-    margin-left: 15px;
+    margin: 10px 10px 10px 15px;
     font-weight: normal;
 }
