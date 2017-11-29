@@ -2,7 +2,7 @@
 {
     display: grid;
     
-    grid-template-columns: minmax(120px, 1fr) 270px 270px 
+    grid-template-columns: minmax(110px, 1fr) 270px 270px 
         270px 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 20px;
@@ -20,7 +20,7 @@
 a
 {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 a:hover
@@ -35,17 +35,16 @@ a:hover
     grid-area: 🍌;
 }
 
-.yandex-word::first-letter
+.yandex-logo-wrapper
 {
-    color: red;
+    width: 100%;
+    max-height: 100px;
+    text-align: right;
 }
 
-.yandex-word
+.yandex-logo
 {
-    font-size: 35px;
-    width: 100%;
-    text-align: right;
-    padding-top: 43px;
+    padding-top: 7px;
 }
 
 /*  Блок с названием города  */
@@ -57,7 +56,7 @@ a:hover
 
 .current-city-name-link
 {
-    color: grey;
+    color: #808080;
     display: inline-block;
     margin-top: 10px;
     margin-left: 20px;
@@ -98,6 +97,11 @@ a:hover
     margin-left: 7px;
 }
 
+.smi-news-city:hover
+{
+    opacity: 1;
+}
+
 .smi-news-city-link
 {
     color: #0054b9;
@@ -106,7 +110,7 @@ a:hover
 .now-date
 {
     margin-left: 7px;
-    color: gray;
+    color: #808080;
 }
 
 .smi-news-list
@@ -142,7 +146,7 @@ a:hover
 
 .change-in-rate
 {
-    color: grey;
+    color: #808080;
 }
 
 .more-exchange-info
@@ -152,7 +156,7 @@ a:hover
 
 .more-exchange-info-link
 {
-    color: grey;
+    color: #808080;
 }
 
 /*  Блок с рекламой яндекс браузера  */
@@ -222,15 +226,27 @@ a:hover
 
 .search-button
 {
-    display: inline-block;
     position: absolute;
     top: 0;
     right: -80px;
-    width: 80px;
+    width: 60px;
     height: 35px;
+    text-align: right;
     border: 2px solid #ffdb4d;
     background: #ffdb4d;
     cursor: pointer;
+    outline: none;
+}
+
+.search-button-triangle
+{
+    position: absolute;
+    top: 0;
+    right: -113px;
+    width: 35px;
+    height: 35px;
+    background-image: url('images/search-triangle.svg');
+    background-size: cover;
 }
 
 .search-example
@@ -242,19 +258,19 @@ a:hover
 
 .search-example-link
 {
-    color: grey;
+    color: #808080;
 }
 
 /* Реклама автомобиля */
 
-.car-advert
+.rosneft-advert
 {
     grid-area: 🐖;
 }
 
-.car-advert img
+.rosneft-advert img
 {
-    max-width: 100%;
+    width: 100%;
 }
 
 /* Блок "Посещаемое" */
@@ -297,10 +313,12 @@ a:hover
 .tv-program
 {
     grid-area: 🎯;
+    position: relative;
 }
 
 .tv-program-header
 {
+    width: 142px;
     font-weight: normal;
     margin: 0;
 }
@@ -310,9 +328,37 @@ a:hover
     color: #0054b9;
 }
 
-.tv-program-header-link-image
+.tv-online
 {
-    content: url('images/tv-online.png');
+    margin-left: 10px;
+    background: linear-gradient(to right, #00a1fa, #6c70f8);
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 5px;
+    color: #fff;
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+.tv-online-triangle
+{
+    width: 8px;
+    margin-left: 5px;
+}
+
+.tv-online:hover
+{
+    color: #fff;
+    transform: scale(1.1);
+    right: 22px;
+    transition: .2s;
+}
+
+.tv-online:hover .tv-online-triangle
+{
+    width: 12px;
+    transition: .2s;
 }
 
 .tv-program-item
@@ -320,11 +366,7 @@ a:hover
     margin: 10px 0;
 }
 
-.tv-program-name
-{
-    margin-left: 5px;
-}
-
+.tv-program-name,
 .tv-program-chanel
 {
     margin-left: 5px;
@@ -332,7 +374,7 @@ a:hover
 
 .tv-program-chanel-link
 {
-    color: grey;
+    color: #808080;
 }
 
 /*  Блок "Погода"  */
@@ -348,9 +390,17 @@ a:hover
     color: #0054b9;
 }
 
-.temperature::before
+.cloud-wrapper
 {
-    content: url('images/weather.png');
+    display: inline-block;
+    height: 21px;
+}
+
+.cloud
+{
+    width: 32px;
+    height: 32px;
+    background-image: url('images/cloud.svg');
 }
 
 .temperature
@@ -394,9 +444,17 @@ a:hover
     color: #0054b9;
 }
 
-.traffic-jams-rate::before
+.traffic-light-wrapper
 {
-    content: url('images/traffic-jams.png');
+    display: inline-block;
+    height: 25px;
+}
+
+.traffic-light
+{
+    width: 32px;
+    height: 32px;
+    background-image: url('images/traffic-light.svg');
 }
 
 /*  Блок "Анекдоты"  */
@@ -531,7 +589,7 @@ a:hover
 .car-news-wrapper
 {
     height: 273px;
-    width: 287px;
+    width: 400px;
     overflow: auto;
 }
 
@@ -560,12 +618,13 @@ a:hover
 .car-news-item
 {
     margin: 10px 0;
+    width: 268px;
 }
 
 .car-news-time
 {
     font-size: 12px;
-    color: grey;
+    color: #808080;
 }
 
 /*  Блок с настройками и инфомацией о почтовом ящике  */
@@ -602,7 +661,7 @@ a:hover
 
 .username::first-letter
 {
-    color: red;
+    color: #ff0303;
 }
 
 .number-of-letters
@@ -611,9 +670,8 @@ a:hover
     margin-top: 10px;
 }
 
-.number-of-letters-link::before
+.mail
 {
-    content: 'Почта';
     margin: 10px 10px 10px 15px;
     font-weight: normal;
 }

@@ -8,7 +8,10 @@
 <body>
     <main class="yandex-main">
         <header class="page-header">
-            <div class="yandex-word">Яндекс</div>
+            <div class="yandex-logo-wrapper">
+                <img src="images/yandex-logo.svg" 
+                    alt="Яндекс логотип" class="yandex-logo">
+            </div>
         </header>
         <aside class="current-city-name">
             <a href="#" class="current-city-name-link">Екатеринбург</a>
@@ -95,15 +98,20 @@
             <div class="search-wrapper">
                 <form action="#" method="get">
                     <input name="s" placeholder="Что будем искать?" type="search" class="search-input">
-                    <button type="submit" class="search-button">Поиск</button>
+                    <div class="search-button-wrapper">
+                        <button type="submit" class="search-button">Найти</button>
+                        <div class="search-button-triangle"></div>
+                    </div>
                 </form>
             </div>
             <div class="search-example">
                 Найдётся всё. Например, <a href="#" class="search-example-link">выхожу один я на дорогу</a>
             </div>
         </section>
-        <article class="car-advert">
-            <img src="images/car-adver.png" alt="Реклама автомобиля">
+        <article class="rosneft-advert">
+            <a href="" class="rosneft-advert-link">
+                <img src="images/rosneft-advert.jpg" alt="Реклама автомобиля">
+            </a>
         </article>
         <section class="most-visited">
             <h2 class="most-visited-header"><a href="#" class="most-visited-header-link">Посещаемое</a></h2>
@@ -139,8 +147,11 @@
         <section class="tv-program">
             <h2 class="tv-program-header">
                 <a href="#" class="tv-program-header-link">Телепрограмма</a>
-                <a href="#" class="tv-program-header-link-image"></a>
             </h2>
+            <a href="#" class="tv-online">
+                ТВ онлайн
+                <img src="images/tv-online-triangle.svg" alt="Треугольник" class="tv-online-triangle">
+            </a>
             <div class="tv-program-item">
                 <time datetime="2017-11-13T16:00">16:00</time>
                 <span class="tv-program-name"><a href="#">Понять. Простить</a></span>
@@ -176,18 +187,34 @@
             </div>
         </section>
         <section class="weather">
-            <div class="weather-header-wrapper">
-                <h2 class="weather-header"><a href="#" class="weather-header-link">Погода</a></h2>
+            <article class="weather-header-wrapper">
+                <h2 class="weather-header">
+                    <a href="#" class="weather-header-link">Погода</a>
+                </h2>
+                <div class="cloud-wrapper">
+                    <a href="#">
+                        <div class="cloud"></div>
+                    </a>
+                </div>
                 <a href="#" class="temperature">
                     -3 &#186;C
                 </a>
-            </div>
+            </article>
             <div class="future-temperature">Вечер -5,</div>
             <div class="future-temperature">ночь -5</div>
         </section>
         <section class="traffic-jams">
-            <h2 class="traffic-jams-header"><a href="#" class="traffic-jams-header-link">Пробки</a></h2>
-            <span class="traffic-jams-rate"><a href="#" class="traffic-jams-rate-link">3 балла</a></span>
+            <h2 class="traffic-jams-header">
+                <a href="#" class="traffic-jams-header-link">Пробки</a>
+            </h2>
+            <div class="traffic-light-wrapper">
+                <a href="#">
+                    <div class="traffic-light"></div>
+                </a>
+            </div>
+            <span class="traffic-jams-rate">
+                <a href="#" class="traffic-jams-rate-link">3 балла</a>
+            </span>
         </section>
         <section class="anecdotes">
             <h2 class="anecdotes-header"><a href="#" class="anecdotes-header-link">Лучшие анекдоты</a></h2>
@@ -301,7 +328,10 @@
             <div class="settings"><a href="#">Настройки</a></div>
             <div class="mailbox-info">
                 <div class="username"><a href="">login</a></div>
-                <div class="number-of-letters"><a href="" class="number-of-letters-link">138</a></div>
+                <div class="number-of-letters">
+                    <a href="#" class="mail">Почта</a>
+                    <a href="" class="number-of-letters-link">138</a>
+                </div>
             </div>
         </section>
     </main>
